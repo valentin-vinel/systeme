@@ -1,0 +1,46 @@
+/* ── STATS ── */
+.stats-strip {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1080px;
+  margin: 0 auto 96px;
+  padding: 0 48px;
+  box-shadow: var(--shadow);
+}
+
+.stat {
+  padding: 28px 32px;
+  border-right: 1px solid var(--border);
+  text-align: center;
+}
+
+.stat:last-child { border-right: none; }
+
+.stat-value {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--ink-light);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .stats-strip {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    margin: 0 20px 64px;
+  }
+  .stat { border-right: none; border-bottom: 1px solid var(--border); }
+  .stat:last-child { border-bottom: none; }
+}

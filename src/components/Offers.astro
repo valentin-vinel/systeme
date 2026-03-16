@@ -1,0 +1,83 @@
+---
+import '../styles/components/offers.css';
+
+const offers = [
+  {
+    // icon: '🌱',
+    name: 'Essentiel',
+    desc: 'Pour ceux qui partent de zéro ou ont besoin d\'une présence simple et rapide.',
+    price: '1 490 €',
+    unit: '',
+    featured: false,
+    // delivery: 'Livré en 1 semaine',
+    items: [
+      'Landing page ou one-page',
+      'Formulaire de contact',
+      'Responsive mobile',
+      'Mise en ligne incluse',
+    ],
+    options: [],
+  },
+  {
+    // icon: '🏠',
+    name: 'Vitrine',
+    desc: 'Pour ceux qui veulent une vraie présence professionnelle en ligne.',
+    price: '2 490 €',
+    unit: '',
+    featured: true,
+    // delivery: 'Livré en 3 semaines',
+    items: [
+      "Jusqu'à 5 pages",
+      'Optimisation SEO de base',
+      'Google Analytics',
+      'Responsive mobile',
+    ],
+    options: ['Back-office blog +990 €'],
+  },
+  {
+    // icon: '⚙️',
+    name: 'Sur-mesure',
+    desc: 'Pour les besoins spécifiques : e-commerce, espace client, CRM, app métier...',
+    price: 'Sur devis',
+    unit: '',
+    featured: false,
+    // delivery: 'Délai selon projet',
+    items: [
+      'Analyse du besoin',
+      'Développement Node/React',
+      'Livraison + formation',
+      'Support post-livraison',
+    ],
+    options: [],
+  },
+];
+---
+
+<section id="offres" class="reveal">
+  <div class="section-label">Tarifs transparents</div>
+  <h2>Ce que je propose</h2>
+  <p class="section-intro">Des offres claires, sans mauvaise surprise. Vous savez exactement ce que vous payez et ce que vous recevez.</p>
+
+  <div class="offers-grid">
+    {offers.map(offer => (
+      <div class={`offer-card ${offer.featured ? 'featured' : ''}`}>
+        {offer.featured && <span class="featured-badge">Populaire</span>}
+        <div class="offer-name">{offer.name}</div>
+        <p class="offer-desc">{offer.desc}</p>
+        <div class="offer-price">
+          {offer.price}
+          {offer.unit && <span>{offer.unit}</span>}
+        </div>
+        <ul class="offer-items">
+          {offer.items.map(item => <li class="offer-item">{item}</li>)}
+        </ul>
+        {offer.options.length > 0 && (
+          <div class="offer-options">
+            <div class="offer-options-label">Options</div>
+            {offer.options.map(opt => <div class="offer-option">{opt}</div>)}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+</section>

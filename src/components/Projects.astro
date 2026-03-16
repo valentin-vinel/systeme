@@ -1,0 +1,48 @@
+---
+import '../styles/components/projects.css';
+
+const projects = [
+  {
+    img: '/bp.png', alt: 'Image projet Bernard Pradier', tag: 'E-commerce', theme: '',
+    name: 'Boutique Shopify Headless',
+    desc: "Création complète de l'interface web en React/Next.js en suivant les exigences client.",
+    url: 'www.bernard-pradier.fr',
+  },
+  {
+    img: 'si.png', alt: 'Image projet Speed Importation', tag: 'Site vitrine', theme: 'warm',
+    name: 'Refonte WordPress',
+    desc: 'Nouveau design moderne et responsive pour Speed Importation.',
+    url: 'www.speedimportation.fr',
+  },
+  {
+    img: '/dawa.png', alt: 'Image projet Dawa Création', tag: 'E-commerce', theme: 'dark',
+    name: 'Boutique Wix',
+    desc: 'Refonte e-commerce complète avec catalogue produit et paiement en ligne.',
+    url: 'www.dawacreation.com',
+  },
+];
+---
+
+<div id="projets" class="projects-section reveal">
+  <div class="inner">
+    <div class="section-label">Réalisations</div>
+    <h2>Mes projets récents</h2>
+    <p class="section-intro">Chaque projet est unique. Voici quelques exemples de ce que j'ai livré récemment.</p>
+
+    <div class="projects-grid">
+      {projects.map(p => (
+        <div class="project-card">
+          <div class={`project-thumb ${p.theme}`}>
+            <img src={p.img} alt={p.alt} />
+          </div>
+          <div class="project-body">
+            <span class="project-tag">{p.tag}</span>
+            <div class="project-name">{p.name}</div>
+            <p class="project-desc">{p.desc}</p>
+            <a href={p.url} target="_blank" rel="noopener" class="project-link">Voir le projet →</a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

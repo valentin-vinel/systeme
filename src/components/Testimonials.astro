@@ -1,0 +1,43 @@
+---
+import '../styles/components/testimonials.css';
+
+const testimonials = [
+  {
+    emoji: 'MV',
+    text: "Notre site a été livré en 10 jours, exactement comme convenu. Valentin est professionnel, à l'écoute et disponible. Je recommande !",
+    name: 'Mathieu V.', role: 'Directeur commercial',
+  },
+  {
+    emoji: 'CS',
+    text: "Très à l'écoute, réactif et professionnel. Il a su traduire ce que je voulais en un site clair qui me correspond.",
+    name: 'Christiane S.', role: 'Artisane d\'art',
+  },
+  {
+    emoji: 'BP',
+    text: "Valentin est professionnel, à l'écoute et de bons conseils. Il a su répondre à mes attentes et m'a accompagner sur la réalisation de mon site.",
+    name: 'Bernard P.', role: 'Artiste et viticulteur',
+  },
+];
+---
+
+<section id="temoignages" class="reveal">
+  <div class="section-label">Ce qu'ils disent</div>
+  <h2>Ils me font confiance</h2>
+  <p class="section-intro">Chaque projet laisse une impression. Voici les leurs.</p>
+
+  <div class="testi-grid">
+    {testimonials.map(t => (
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"{t.text}"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">{t.emoji}</div>
+          <div>
+            <div class="testi-name">{t.name}</div>
+            <div class="testi-role">{t.role}</div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

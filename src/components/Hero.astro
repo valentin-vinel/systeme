@@ -1,0 +1,29 @@
+---
+import '../styles/components/hero.css';
+
+const disponible = true;
+---
+
+<div class="hero-wrapper">
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        {disponible ? 'Disponible pour de nouveaux projets' : 'Complet pour le moment'}
+      </div>
+      <h1>Sites et applications web <em>pour TPE, artisans et indépendants.</em></h1>
+      <p class="hero-sub">
+        Je crée des sites professionnels pour les TPE, artisans et indépendants. <br>
+        Sans jargon, sans stress, avec un résultat qui vous ressemble.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary-hero">Demander un devis gratuit →</a>
+        <a href="#projets" class="btn-secondary">Voir mes réalisations</a>
+      </div>
+    </div>
+
+    <div class="hero-avatar">
+      <img src="/photo.jpeg" alt="Valentin Vinel" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.mentions-legales {
+    max-width: 1124px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.title {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.subtitle {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+p {
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
+.ml-link {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}

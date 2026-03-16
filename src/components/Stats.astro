@@ -1,0 +1,18 @@
+---
+import '../styles/components/stats.css';
+
+const stats = [
+  { value: '+10',      label: 'Projets réalisés' },
+  { value: '3 sem.', label: 'Délai de livraison moyen' },
+  { value: '100%',   label: 'Clients satisfaits' },
+];
+---
+
+<div class="stats-strip reveal">
+  {stats.map(s => (
+    <div class="stat">
+      <span class="stat-value">{s.value}</span>
+      <span class="stat-label">{s.label}</span>
+    </div>
+  ))}
+</div>

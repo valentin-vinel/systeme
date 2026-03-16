@@ -1,0 +1,67 @@
+---
+import '../styles/components/contact.css';
+
+const contact = {
+  location: 'Vaucluse & toute la France (100% remote)',
+  response: 'Réponse sous 24h garantie',
+  phone: '06 16 77 19 19',
+};
+---
+
+<div id="contact">
+  <div class="contact-section reveal">
+    <div class="contact-left">
+      <div class="section-label">Contact</div>
+      <h2>Parlons de votre projet</h2>
+      <p class="section-intro">Un projet en tête ? Une question ? Je vous réponds en moins de 24h.</p>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <span>{contact.location}</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">⚡</div>
+          <span>{contact.response}</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <span>{contact.phone}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Branchez Formspree : remplacez action par https://formspree.io/f/VOTRE_ID -->
+    <form class="contact-form" action="#" method="POST">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="prenom">Prénom</label>
+          <input type="text" id="prenom" name="prenom" placeholder="John" required />
+        </div>
+        <div class="form-field">
+          <label for="metier">Métier</label>
+          <input type="text" id="metier" name="metier" placeholder="Artisan, kiné..." />
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="john@exemple.fr" required />
+      </div>
+      <div class="form-field">
+        <label for="besoin">Votre besoin</label>
+        <select id="besoin" name="besoin">
+          <option value="">Choisissez une offre...</option>
+          <option>Site One-Page - 1 490€</option>
+          <option>Site Vitrine - 2 490€</option>
+          <option>Maintenance mensuelle - 149€/mois</option>
+          <option>Autre / je ne sais pas encore</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="message">Message (optionnel)</label>
+        <textarea id="message" name="message" placeholder="Dites-moi en plus sur votre activité/projet..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Envoyer ma demande →</button>
+    </form>
+  </div>
+</div>

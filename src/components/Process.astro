@@ -1,0 +1,37 @@
+---
+import '../styles/components/process.css';
+
+const steps = [
+  {
+    num: '01',
+    title: 'On discute de votre projet',
+    desc: "Un appel de 30 minutes gratuit pour comprendre vos besoins, votre activité et vos attentes. Sans engagement.",
+  },
+  {
+    num: '02',
+    title: 'Je vous envoie un devis',
+    desc: "Un devis clair et détaillé sous 48h. Prix fixe, pas de mauvaise surprise. Vous validez quand vous êtes prêt.",
+  },
+  {
+    num: '03',
+    title: 'Votre site est en ligne',
+    desc: "Je livre votre site sous 30 jours. Vous recevez une analyse mensuelle.",
+  },
+];
+---
+
+<section id="process" class="reveal">
+  <div class="section-label">Comment ça se passe</div>
+  <h2>Simple. Rapide. Sans stress.</h2>
+  <p class="section-intro">De votre premier message à la mise en ligne, je vous accompagne à chaque étape.</p>
+
+  <div class="process-grid">
+    {steps.map(step => (
+      <div class="process-step">
+        <div class="step-num">{step.num}</div>
+        <div class="step-title">{step.title}</div>
+        <p class="step-desc">{step.desc}</p>
+      </div>
+    ))}
+  </div>
+</section>
