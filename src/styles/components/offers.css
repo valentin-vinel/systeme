@@ -97,6 +97,17 @@
   letter-spacing: 0;
 }
 
+.price {
+  line-height: 1.1;
+}
+
+.offer-price-text {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #b6b6b6;
+  font-weight: 500;
+}
+
 .offer-items { display: flex; flex-direction: column; gap: 8px; }
 
 .offer-item {

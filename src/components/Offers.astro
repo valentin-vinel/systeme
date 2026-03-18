@@ -65,7 +65,10 @@ const offers = [
         <div class="offer-name">{offer.name}</div>
         <p class="offer-desc">{offer.desc}</p>
         <div class="offer-price">
-          {offer.price}
+          {offer.name !== "Sur-mesure" && (
+            <p class="offer-price-text">À partir de</p>
+          )}
+          <p class="price">{offer.price}</p>
           {offer.unit && <span>{offer.unit}</span>}
         </div>
         <ul class="offer-items">
