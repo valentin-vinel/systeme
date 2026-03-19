@@ -3,19 +3,19 @@ import '../styles/components/projects.css';
 
 const projects = [
   {
-    img: '/bp.png', alt: 'Image projet Bernard Pradier', tag: 'E-commerce', theme: '',
+    img: '/bp.webp', alt: 'Image projet Bernard Pradier', tag: 'E-commerce', theme: '',
     name: 'Boutique Shopify Headless',
     desc: "Création complète de l'interface web en React/Next.js en suivant les exigences client.",
     url: 'https://www.bernard-pradier.fr',
   },
   {
-    img: 'si.png', alt: 'Image projet Speed Importation', tag: 'Site vitrine', theme: 'warm',
+    img: 'si.webp', alt: 'Image projet Speed Importation', tag: 'Site vitrine', theme: 'warm',
     name: 'Refonte WordPress',
     desc: 'Nouveau design moderne et responsive pour Speed Importation.',
     url: 'https://www.speedimportation.fr',
   },
   {
-    img: '/dawa.png', alt: 'Image projet Dawa Création', tag: 'E-commerce', theme: 'dark',
+    img: '/dawa.webp', alt: 'Image projet Dawa Création', tag: 'E-commerce', theme: 'dark',
     name: 'Boutique Wix',
     desc: 'Refonte e-commerce complète avec catalogue produit et paiement en ligne.',
     url: 'https://www.dawacreation.com',
@@ -33,7 +33,7 @@ const projects = [
       {projects.map(p => (
         <div class="project-card">
           <div class={`project-thumb ${p.theme}`}>
-            <img src={p.img} alt={p.alt} />
+            <img src={p.img} alt={p.alt} width="400" height="250" />
           </div>
           <div class="project-body">
             <span class="project-tag">{p.tag}</span>
